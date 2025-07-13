@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preloved | El Clóset de la Olivia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <style>
+    body {
+      background: #f6f3fa;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .preloved-slider-section {
+      max-width: 600px;
+      margin: 2.5rem auto;
+      padding: 2rem 1rem;
+      background: #f4edfd;
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 24px 0 #d1c4e9;
+    }
+    .preloved-slider-section h2 {
+      text-align: center;
+      color: #a480cb;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .swiper {
+      width: 100%;
+      padding-bottom: 2rem;
+    }
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 12px 0 #d1c4e9;
+      transition: box-shadow 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .preloved-icon {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 2.2rem;
+      color: #a480cb;
+      filter: drop-shadow(0 1px 4px #fff);
+      z-index: 2;
+      background: #fff7fc;
+      border-radius: 50%;
+      padding: 0.25em 0.38em;
+      box-shadow: 0 2px 8px #f3e5f5;
+      pointer-events: none;
+    }
+    .producto-img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 24px 0 #e1bee7;
+      transition: transform 0.4s, box-shadow 0.4s;
+      margin-bottom: 1rem;
+      background: #faf4ff;
+      margin-top: 1.3rem;
+    }
+    .producto-img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 36px 0 #a480cb;
+    }
+    .slide-desc {
+      text-align: center;
+      padding: 0.2rem 0.4rem 0.8rem;
+    }
+    .slide-desc h3 {
+      color: #a480cb;
+      font-size: 1.18rem;
+      margin-bottom: 0.3rem;
+    }
+    .slide-desc p {
+      color: #8578a9;
+      font-size: 0.98rem;
+      margin: 0;
+    }
+    .comprar-btn {
+      background: linear-gradient(90deg,#bc8be7,#a788c1 80%);
+      color: #fff;
+      border: none;
+      border-radius: 1.5rem;
+      font-size: 1.06rem;
+      font-weight: 500;
+      margin-top: 0.7rem;
+      padding: 0.55em 2em;
+      cursor: pointer;
+      box-shadow: 0 3px 12px #cebdf1;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      letter-spacing: 1px;
+    }
+    .comprar-btn:hover {
+      background: linear-gradient(90deg,#a788c1,#bc8be7 80%);
+      box-shadow: 0 7px 24px #a480cb;
+      transform: scale(1.05);
+    }
+    /* Swiper arrows y paginación */
+    .swiper-button-next, .swiper-button-prev {
+      color: #a480cb;
+      filter: drop-shadow(0 1px 2px #fff);
+    }
+    .swiper-pagination-bullet {
+      background: #a480cb;
+      opacity: 0.7;
+    }
+    .swiper-pagination-bullet-active {
+      background: #bc8be7;
+      opacity: 1;
+    }
+    @media (max-width: 640px) {
+      .preloved-slider-section {
+        max-width: 98vw;
+        padding: 1rem 0.1rem;
+      }
+      .producto-img {
+        max-width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="preloved-slider-section">
+    <h2>Preloved</h2>
+    <div class="swiper preloved-slider">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <span class="preloved-icon" title="Segunda mano">♻️</span>
+          <img src="images_preloved/Top_Ceda_H&M.jpg" alt="Top Lila H&M " class="producto-img">
+          <div class="slide-desc">
+            <h3>Top Lila H&M </h3>
+            <p>Top corto satinado lila, escote drapeado, diseño elegante y cómodo. Perfecto para looks de día y noche.</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <span class="preloved-icon" title="Segunda mano">♻️</span>
+          <img src="images_preloved/Top_Ceda_H&M2.jpg" alt="Top Lila H&M Colgado" class="producto-img">
+          <div class="slide-desc">
+            <h3>Top Lila H&M (Colgado)</h3>
+            <p>Edición sostenible: 54% poliéster reciclado. ¡Moda circular y responsable!</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <span class="preloved-icon" title="Segunda mano">♻️</span>
+          <img src="images_preloved/Top_Ceda_H&M3.jpg" alt="Etiqueta Top H&M" class="producto-img">
+          <div class="slide-desc">
+            <h3>Etiqueta Detalle</h3>
+            <p>Conscious choice H&M. Cuidando el planeta y tu estilo. Precio: 98000 gs.</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+	<!-- Slide 4 -->
+<div class="swiper-slide">
+  <span class="preloved-icon" title="Segunda mano">♻️</span>
+  <img src="images_preloved/Body_Marca_Romance.jpg" alt="Body Rojo Romance + Short Blanco" class="producto-img">
+  <div class="slide-desc">
+    <h3>Body Rojo Romance</h3>
+    <p>Body rojo con etiqueta. Look fresco y vibrante. Precio: 50.000 Gs.</p>
+    <button class="comprar-btn">Comprar</button>
+  </div>
+</div>
+
+<!-- Slide 5 -->
+<div class="swiper-slide">
+  <span class="preloved-icon" title="Segunda mano">♻️</span>
+  <img src="images_preloved/Vestido_Seda_H&M.jpg" alt="Vestido Blanco Seda H&M" class="producto-img">
+  <div class="slide-desc">
+    <h3>Vestido Blanco Seda</h3>
+    <p>Vestido largo tipo lencero, escote drapeado. Ideal para eventos o salidas elegantes. Precio: 195.000 Gs.</p>
+    <button class="comprar-btn">Comprar</button>
+  </div>
+</div>
+
+<!-- Slide 6 -->
+<div class="swiper-slide">
+  <span class="preloved-icon" title="Segunda mano">♻️</span>
+  <img src="images_preloved/Calza_Deportiva_Rondina.jpg" alt="Calzas Deportivas Multicolor" class="producto-img">
+  <div class="slide-desc">
+    <h3>Set Calzas Deportivas</h3>
+    <p>calzas: lavanda, negra acanalada y Nike tie-dye. Cómodas, versátiles y de calidad.</p>
+    <button class="comprar-btn">Comprar</button>
+  </div>
+</div>
+
+<!-- Slide 7 -->
+<div class="swiper-slide">
+  <span class="preloved-icon" title="Segunda mano">♻️</span>
+  <img src="images_preloved/Calza_Deportiva_Rondina2.jpg" alt="Calza Deportiva Lavanda" class="producto-img">
+  <div class="slide-desc">
+    <h3>Calza Lavanda Rondina</h3>
+    <p>Tejido suave, cintura alta. Ideal para yoga, gym o uso casual. Excelente estado. Precio: 65.000 Gs.</p>
+    <button class="comprar-btn">Comprar</button>
+  </div>
+</div>
+
+<!-- Slide 8 -->
+<div class="swiper-slide">
+  <span class="preloved-icon" title="Segunda mano">♻️</span>
+  <img src="images_preloved/Calza_Negra_H&M.jpg" alt="Calza Negra Acanalada H&M" class="producto-img">
+  <div class="slide-desc">
+    <h3>Calza Negra H&M</h3>
+    <p>Diseño acanalado, tejido térmico. Cintura alta. Se adapta a cualquier outfit. Precio: 78.000 Gs.</p>
+    <button class="comprar-btn">Comprar</button>
+  </div>
+</div>
+
+<!-- Slide 9 -->
+<div class="swiper-slide">
+  <span class="preloved-icon" title="Segunda mano">♻️</span>
+  <img src="images_preloved/Calza_Nike_Talle6.jpg" alt="Calza Nike Multicolor Talle 6" class="producto-img">
+  <div class="slide-desc">
+    <h3>Calza Nike Tie-Dye</h3>
+    <p>Estilo colorido tie-dye. Talle 6 meses. Ideal para niñas o talles pequeños. Producto con etiqueta. Precio: 85.000 Gs.</p>
+    <button class="comprar-btn">Comprar</button>
+  </div>
+</div>
+
+      </div>
+      <!-- Navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.preloved-slider', {
+      loop: true,
+      spaceBetween: 24,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      effect: 'slide',
+      grabCursor: true,
+    });
+  </script>
+</body>
+</html>

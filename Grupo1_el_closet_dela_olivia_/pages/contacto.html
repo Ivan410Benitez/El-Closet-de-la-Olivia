@@ -1,0 +1,175 @@
+
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - El Clóset de la Olivia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #fff9f3;
+      color: #4d3b4f;
+    }
+    .container {
+      max-width: 480px;
+      margin: 2.3rem auto;
+      background: #fffbea;
+      padding: 2.3rem 2rem 2rem 2rem;
+      border-radius: 32px;
+      box-shadow: 0 4px 32px rgba(150,120,100,0.08);
+      text-align: center;
+      position: relative;
+    }
+    .logo {
+      width: 108px;
+      margin: 0 auto 1rem auto;
+      display: block;
+      filter: grayscale(40%);
+    }
+    h2 {
+      font-family: 'Pacifico', cursive;
+      color: #bfa8dc;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      font-size: 1.08rem;
+      color: #7e6153;
+      margin-bottom: 1.4rem;
+      font-weight: 500;
+    }
+    .redes {
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+      margin: 1.1em 0 1.8em 0;
+    }
+    .redes a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7em;
+      padding: 0.7em 1.1em;
+      border-radius: 18px;
+      font-size: 1.06em;
+      text-decoration: none;
+      color: #3e3650;
+      font-weight: 600;
+      background: #f7eefa;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 8px #e2c7fa50;
+    }
+    .redes a:hover {
+      background: #fbe9e7;
+      color: #a86fb9;
+      box-shadow: 0 2px 18px #cbb1fc85;
+    }
+    .icon {
+      width: 1.4em;
+      height: 1.4em;
+      vertical-align: middle;
+    }
+    .contact-form {
+      margin-top: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      align-items: stretch;
+    }
+    input, textarea {
+      border: 1.5px solid #e4d3bd;
+      background: #fcf5ed;
+      border-radius: 14px;
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    input:focus, textarea:focus {
+      border-color: #bfa8dc;
+    }
+    textarea {
+      min-height: 64px;
+      resize: vertical;
+      font-family: inherit;
+    }
+    .btn-enviar {
+      background: linear-gradient(90deg,#d1b3e0 60%,#ffe0b2 100%);
+      color: #4e364d;
+      border: none;
+      font-weight: 700;
+      border-radius: 18px;
+      padding: 0.8em 1.5em;
+      font-size: 1.05em;
+      box-shadow: 0 3px 14px #dfb9ec3a;
+      cursor: pointer;
+      transition: background 0.15s, box-shadow 0.17s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6em;
+    }
+    .btn-enviar:hover {
+      background: linear-gradient(90deg,#ffe0b2 20%,#d1b3e0 80%);
+      color: #9167ad;
+      box-shadow: 0 2px 18px #cbb1fc85;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 0.5rem 1.3rem 0.5rem;
+        max-width: 99vw;
+      }
+      h2 {
+        font-size: 1.33rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.jpg" alt="Logo El Clóset de la Olivia" class="logo">
+    <h2>Contacto</h2>
+    <div class="subtitle">
+      ¿Querés comunicarte con nosotros?<br>
+      Podés hacerlo directamente por WhatsApp o Instagram.<br>
+      También podés enviarnos un mensaje desde el formulario y te responderemos lo antes posible.
+    </div>
+    <div class="redes">
+      <a href="https://www.instagram.com/laolivia_closetpy/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="icon" style="filter:invert(38%) sepia(16%) saturate(313%) hue-rotate(221deg) brightness(93%) contrast(87%);" alt="Instagram">
+        Instagram
+      </a>
+      <a href="https://wa.me/595986117776" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="icon" style="filter:brightness(0.85) saturate(1.1);" alt="WhatsApp">
+        WhatsApp
+      </a>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="email" placeholder="Tu correo electrónico" required>
+      <textarea id="mensaje" placeholder="Escribí tu consulta, pedido o sugerencia..." rows="3" required></textarea>
+      <button type="submit" class="btn-enviar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 24 24"><path fill="currentColor" d="m5 20 14-8-14-8v16zm2-13.15L15.76 12 7 17.15V6.85z"/></svg>
+        Enviar mensaje por correo
+      </button>
+    </form>
+  </div>
+  <script>
+    // Al enviar el formulario, abre el cliente de correo electrónico predeterminado
+    document.getElementById('contactForm').onsubmit = function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+      const subject = encodeURIComponent("Consulta desde El Clóset de la Olivia");
+      const body = encodeURIComponent(
+        `Nombre: ${nombre}\nEmail: ${email}\nMensaje: ${mensaje}\n\n(Enviado desde la web El Clóset de la Olivia)`
+      );
+      window.location.href = `mailto:tu-correo@ejemplo.com?subject=${subject}&body=${body}`;
+    };
+  </script>
+</body>
+</html>

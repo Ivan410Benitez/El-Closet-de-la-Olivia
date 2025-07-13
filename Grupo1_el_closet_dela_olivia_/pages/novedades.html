@@ -1,0 +1,245 @@
+
+  <html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novedades | El Clóset de la Olivia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <style>
+    body {
+      background: #f9f6fa;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .novedades-slider-section {
+      max-width: 600px;
+      margin: 2.5rem auto;
+      padding: 2rem 1rem;
+      background: #fff7fc;
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 24px 0 #f3e5f5;
+    }
+    .novedades-slider-section h2 {
+      text-align: center;
+      color: #a788c1;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .swiper {
+      width: 100%;
+      padding-bottom: 2rem;
+    }
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 12px 0 #e1bee7;
+      transition: box-shadow 0.3s;
+      padding-bottom: 1rem;
+    }
+    .producto-img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 24px 0 #e1bee7;
+      transition: transform 0.4s, box-shadow 0.4s;
+      margin-bottom: 1rem;
+      background: #faf4ff;
+    }
+    .producto-img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 36px 0 #ba68c8;
+    }
+    .slide-desc {
+      text-align: center;
+      padding: 0.2rem 0.4rem 0.8rem;
+    }
+    .slide-desc h3 {
+      color: #bc81c9;
+      font-size: 1.15rem;
+      margin-bottom: 0.3rem;
+    }
+    .slide-desc p {
+      color: #766e8d;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    /* Swiper arrows y paginación */
+    .swiper-button-next, .swiper-button-prev {
+      color: #a788c1;
+      filter: drop-shadow(0 1px 2px #fff);
+    }
+    .swiper-pagination-bullet {
+      background: #a788c1;
+      opacity: 0.7;
+    }
+    .swiper-pagination-bullet-active {
+      background: #bc81c9;
+      opacity: 1;
+    }
+    @media (max-width: 640px) {
+      .novedades-slider-section {
+        max-width: 98vw;
+        padding: 1rem 0.1rem;
+      }
+      .producto-img {
+        max-width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="novedades-slider-section">
+    <h2>Novedades</h2>
+    <div class="swiper novedades-slider">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="images_novedades/vestido_ceda_celeste2.jpg" alt="Vestido Celeste Espalda" class="producto-img">
+          <div class="slide-desc">
+            <h3>Vestido Celeste Espalda</h3>
+            <p>Vestido largo de seda, espalda cruzada, ideal para eventos y fiestas.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="images_novedades/vestido_ceda_celeste.jpg" alt="Vestido Celeste Completo" class="producto-img">
+          <div class="slide-desc">
+            <h3>Vestido Celeste Completo</h3>
+            <p>Diseño elegante y fresco, perfecto para verano o noche. Precio: 195.000 gs</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="images_novedades/salida_playa_crochetviolet.jpg" alt="Salida de Playa Violeta" class="producto-img">
+          <div class="slide-desc">
+            <h3>Salida de Playa Violeta</h3>
+            <p>Tejido artesanal, único y cómodo. Talle único. Precio:200.000 gs</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <img src="images_novedades/salida_playa_crochetNegro.jpg" alt="Salida de Playa Negra" class="producto-img">
+          <div class="slide-desc">
+            <h3>Salida de Playa Negra</h3>
+            <p>Hecha a mano, ideal para playa o pileta. Precio:200.000 gs </p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <img src="images_novedades/blusa_rosa_crochet.jpg" alt="Blusa Rosa Crochet" class="producto-img">
+          <div class="slide-desc">
+            <h3>Blusa Rosa Crochet</h3>
+            <p>Blusa fresca y liviana, tejida a mano. Muy versátil.</p>
+          </div>
+        </div>
+
+	<!-- Slide 6 -->
+<div class="swiper-slide">
+  <img src="images_novedades/Crop_Crochet.jpeg" alt="Crop Top Crochet Frontal" class="producto-img">
+  <div class="slide-desc">
+    <h3>Crop Top Crochet</h3>
+    <p>Diseño artesanal en hilo beige, tejido a mano, estilo halter. Ligero y cómodo. Precio 85.000 gs</p>
+  </div>
+</div>
+
+<!-- Slide 7 -->
+<div class="swiper-slide">
+  <img src="images_novedades/Crop_Crochet3.jpeg" alt="Crop Top Crochet Espalda" class="producto-img">
+  <div class="slide-desc">
+    <h3>Crop Top Espalda</h3>
+    <p>Ajuste con tiras, detalle de borde calado. Estilo bohemio chic para verano.</p>
+  </div>
+</div>
+
+ <!-- Slide 8 -->
+<div class="swiper-slide">
+  <img src="images_novedades/Crop_Crochet2.jpeg" alt="Crop Top Beige Visto de Frente" class="producto-img">
+  <div class="slide-desc">
+    <h3>Crop Top Beige</h3>
+    <p>Versión clásica con puntilla decorativa. Fresco y con amarre regulable.</p>
+  </div>
+</div>
+
+<!-- Slide 9 -->
+<div class="swiper-slide">
+  <img src="images_novedades/Cartera_Hilo_Crochet.jpeg" alt="Cartera Crochet con Flecos" class="producto-img">
+  <div class="slide-desc">
+    <h3>Cartera Crochet</h3>
+    <p>Tejido firme, detalles calados y fleco decorativo. Cierre con cremallera.</p>
+  </div>
+</div>
+
+ <!-- Slide 10 -->
+<div class="swiper-slide">
+  <img src="images_novedades/Cartera_Hilo_Crochet2.jpeg" alt="Cartera Crochet Repetida" class="producto-img">
+  <div class="slide-desc">
+    <h3>Cartera Artesanal</h3>
+    <p>Bolso de hilo con forro interior y diseño exclusivo. Práctico y versátil.</p>
+  </div>
+</div>
+
+<!-- Slide 11 -->
+<div class="swiper-slide">
+  <img src="images_novedades/Poncho_Crochet_ParaNiña.jpeg" alt="Poncho Niña Crochet" class="producto-img">
+  <div class="slide-desc">
+    <h3>Poncho Crochet Niña</h3>
+    <p>Color rosa viejo, patrón calado. Suave y abrigado, ideal para media estación. Precio:85.000 gs</p>
+  </div>
+</div>
+
+<!-- Slide 12 -->
+<div class="swiper-slide">
+  <img src="images_novedades/Poncho_Crochet_ParaNiña3.jpeg" alt="Detalle cuello poncho" class="producto-img">
+  <div class="slide-desc">
+    <h3>Detalle Cuello Poncho</h3>
+    <p>Costura reforzada en cuello, tejido con doble hebra. Hecho con amor.</p>
+  </div>
+</div>
+
+<!-- Slide 13 -->
+<div class="swiper-slide">
+  <img src="images_novedades/Poncho_Crochet_ParaNiña2.jpeg" alt="Detalle inferior del poncho" class="producto-img">
+  <div class="slide-desc">
+    <h3>Acabado Poncho</h3>
+    <p>Detalle del borde calado con punto en relieve. Trabajo 100% artesanal.</p>
+   </div>
+ </div>
+
+      </div>
+      <!-- Navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.novedades-slider', {
+      loop: true,
+      spaceBetween: 24,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      effect: 'slide',
+      grabCursor: true,
+    });
+  </script>
+</body>
+</html>

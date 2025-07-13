@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prendas | El Clóset de la Olivia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <style>
+    body {
+      background: #fff6fa;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .prendas-slider-section {
+      max-width: 650px;
+      margin: 2.5rem auto;
+      padding: 2rem 1rem;
+      background: #ffe4ef;
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 24px 0 #fad1e9;
+    }
+    .prendas-slider-section h2 {
+      text-align: center;
+      color: #e09cb1;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .swiper {
+      width: 100%;
+      padding-bottom: 2rem;
+    }
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 12px 0 #fad1e9;
+      transition: box-shadow 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .prendas-icon {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 2.2rem;
+      color: #e09cb1;
+      filter: drop-shadow(0 1px 4px #fff);
+      z-index: 2;
+      background: #fff6fa;
+      border-radius: 50%;
+      padding: 0.25em 0.38em;
+      box-shadow: 0 2px 8px #fad1e9;
+      pointer-events: none;
+    }
+    .producto-img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 24px 0 #fad1e9;
+      transition: transform 0.4s, box-shadow 0.4s;
+      margin-bottom: 1rem;
+      background: #fff4f8;
+      margin-top: 1.3rem;
+    }
+    .producto-img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 36px 0 #e09cb1;
+    }
+    .slide-desc {
+      text-align: center;
+      padding: 0.2rem 0.4rem 0.8rem;
+    }
+    .slide-desc h3 {
+      color: #e09cb1;
+      font-size: 1.18rem;
+      margin-bottom: 0.3rem;
+    }
+    .slide-desc p {
+      color: #b586a3;
+      font-size: 0.98rem;
+      margin: 0;
+    }
+    .comprar-btn {
+      background: linear-gradient(90deg,#e09cb1,#fad1e9 80%);
+      color: #fff;
+      border: none;
+      border-radius: 1.5rem;
+      font-size: 1.06rem;
+      font-weight: 500;
+      margin-top: 0.7rem;
+      padding: 0.55em 2em;
+      cursor: pointer;
+      box-shadow: 0 3px 12px #fad1e9;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      letter-spacing: 1px;
+    }
+    .comprar-btn:hover {
+      background: linear-gradient(90deg,#fad1e9,#e09cb1 80%);
+      box-shadow: 0 7px 24px #e09cb1;
+      transform: scale(1.05);
+    }
+    /* Swiper arrows y paginación */
+    .swiper-button-next, .swiper-button-prev {
+      color: #e09cb1;
+      filter: drop-shadow(0 1px 2px #fff);
+    }
+    .swiper-pagination-bullet {
+      background: #e09cb1;
+      opacity: 0.7;
+    }
+    .swiper-pagination-bullet-active {
+      background: #fad1e9;
+      opacity: 1;
+    }
+    @media (max-width: 640px) {
+      .prendas-slider-section {
+        max-width: 98vw;
+        padding: 1rem 0.1rem;
+      }
+      .producto-img {
+        max-width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="prendas-slider-section">
+    <h2>Prendas</h2>
+    <div class="swiper prendas-slider">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <span class="prendas-icon" title="Segunda mano">♻️</span>
+          <img src="images_prendas/Vestido_Floral_H&M.jpg" alt="Vestido floral H&M" class="producto-img">
+          <div class="slide-desc">
+            <h3>Vestido floral H&M</h3>
+            <p>Vestido largo de algodón orgánico, fresco y alegre. Ideal para primavera/verano.</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <span class="prendas-icon" title="Segunda mano">♻️</span>
+          <img src="images_prendas/Vestido_Floral_H&M2.jpg" alt="Detalle etiqueta vestido" class="producto-img">
+          <div class="slide-desc">
+            <h3>Detalle etiqueta vestido</h3>
+            <p>100% algodón orgánico, moda consciente para tu día a día.</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <span class="prendas-icon" title="Segunda mano">♻️</span>
+          <img src="images_prendas/Vestido_Floral_H&M3.jpg" alt="Vestido floral en perchero" class="producto-img">
+          <div class="slide-desc">
+            <h3>Vestido floral en perchero</h3>
+            <p>Diseño floral exclusivo, cómodo y colorido. ¡Destacá tu estilo!</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <span class="prendas-icon" title="Segunda mano">♻️</span>
+          <img src="images_prendas/Gabardina_Zara2.jpg" alt="Gabardina Zara detalle" class="producto-img">
+          <div class="slide-desc">
+            <h3>Gabardina Zara detalle</h3>
+            <p>Gabardina clásica Zara, talle S, perfecta para media estación. ¡Preloved en estado impecable!</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <span class="prendas-icon" title="Segunda mano">♻️</span>
+          <img src="images_prendas/Gabardina_Zara.jpg" alt="Gabardina Zara completa" class="producto-img">
+          <div class="slide-desc">
+            <h3>Gabardina Zara completa</h3>
+            <p>Con cinturón y doble abotonadura. Versátil y elegante para todos los días.</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- Navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.prendas-slider', {
+      loop: true,
+      spaceBetween: 24,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      effect: 'slide',
+      grabCursor: true,
+    });
+  </script>
+</body>
+</html>

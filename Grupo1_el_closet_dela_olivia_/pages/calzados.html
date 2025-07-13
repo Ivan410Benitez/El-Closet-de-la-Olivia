@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calzados | El Clóset de la Olivia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <style>
+    body {
+      background: #f7f4ef;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .calzados-slider-section {
+      max-width: 650px;
+      margin: 2.5rem auto;
+      padding: 2rem 1rem;
+      background: #f9ede3;
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 24px 0 #d3bfa6;
+    }
+    .calzados-slider-section h2 {
+      text-align: center;
+      color: #9b7762;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .swiper {
+      width: 100%;
+      padding-bottom: 2rem;
+    }
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 12px 0 #e6d3c0;
+      transition: box-shadow 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .calzados-icon {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 2.2rem;
+      color: #9b7762;
+      filter: drop-shadow(0 1px 4px #fff);
+      z-index: 2;
+      background: #f5ebe2;
+      border-radius: 50%;
+      padding: 0.25em 0.38em;
+      box-shadow: 0 2px 8px #f3e5d5;
+      pointer-events: none;
+    }
+    .producto-img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 24px 0 #e6d3c0;
+      transition: transform 0.4s, box-shadow 0.4s;
+      margin-bottom: 1rem;
+      background: #faf7f2;
+      margin-top: 1.3rem;
+    }
+    .producto-img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 36px 0 #9b7762;
+    }
+    .slide-desc {
+      text-align: center;
+      padding: 0.2rem 0.4rem 0.8rem;
+    }
+    .slide-desc h3 {
+      color: #9b7762;
+      font-size: 1.18rem;
+      margin-bottom: 0.3rem;
+    }
+    .slide-desc p {
+      color: #826553;
+      font-size: 0.98rem;
+      margin: 0;
+    }
+    .comprar-btn {
+      background: linear-gradient(90deg,#c8b09a,#9b7762 80%);
+      color: #fff;
+      border: none;
+      border-radius: 1.5rem;
+      font-size: 1.06rem;
+      font-weight: 500;
+      margin-top: 0.7rem;
+      padding: 0.55em 2em;
+      cursor: pointer;
+      box-shadow: 0 3px 12px #e6d3c0;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      letter-spacing: 1px;
+    }
+    .comprar-btn:hover {
+      background: linear-gradient(90deg,#9b7762,#c8b09a 80%);
+      box-shadow: 0 7px 24px #9b7762;
+      transform: scale(1.05);
+    }
+    /* Swiper arrows y paginación */
+    .swiper-button-next, .swiper-button-prev {
+      color: #9b7762;
+      filter: drop-shadow(0 1px 2px #fff);
+    }
+    .swiper-pagination-bullet {
+      background: #9b7762;
+      opacity: 0.7;
+    }
+    .swiper-pagination-bullet-active {
+      background: #c8b09a;
+      opacity: 1;
+    }
+    @media (max-width: 640px) {
+      .calzados-slider-section {
+        max-width: 98vw;
+        padding: 1rem 0.1rem;
+      }
+      .producto-img {
+        max-width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="calzados-slider-section">
+    <h2>Calzados</h2>
+    <div class="swiper calzados-slider">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <span class="calzados-icon" title="Segunda mano">♻️</span>
+          <img src="images_calzados/Mocasin_Gamuza.jpg" alt="Mocasines de gamuza con brillo" class="producto-img">
+          <div class="slide-desc">
+            <h3>Mocasines de gamuza con brillo</h3>
+            <p>Calzado elegante, suave y con detalles brillantes. Perfecto para ocasiones especiales o uso diario.</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <span class="calzados-icon" title="Segunda mano">♻️</span>
+          <img src="images_calzados/Mocasin_Gamuza2.jpg" alt="Mocasines vista superior" class="producto-img">
+          <div class="slide-desc">
+            <h3>Mocasines vista superior</h3>
+            <p>Modelo clásico color negro, talle 38. Suela cómoda y plantilla acolchada.</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <span class="calzados-icon" title="Segunda mano">♻️</span>
+          <img src="images_calzados/Mocasin_Gamuza3.jpg" alt="Detalle de suela" class="producto-img">
+          <div class="slide-desc">
+            <h3>Detalle de suela</h3>
+            <p>Antideslizante y duradero. Marca Tokarra, made in Brazil. Segunda mano, ¡en excelente estado!</p>
+            <button class="comprar-btn">Comprar</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- Navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.calzados-slider', {
+      loop: true,
+      spaceBetween: 24,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      effect: 'slide',
+      grabCursor: true,
+    });
+  </script>
+</body>
+</html>

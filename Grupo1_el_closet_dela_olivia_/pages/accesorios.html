@@ -1,0 +1,190 @@
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Accesorios - El Clóset de la Olivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #fffbea;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #dbb700;
+            margin-top: 24px;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+        .carrusel-container {
+            max-width: 380px;
+            margin: 36px auto 0 auto;
+            background: #fff7ce;
+            border-radius: 2rem;
+            box-shadow: 0 4px 16px #f5eebc6b;
+            padding: 24px 18px 32px 18px;
+            position: relative;
+        }
+        .carrusel-imagen {
+            width: 100%;
+            border-radius: 1.2rem;
+            height: 340px;
+            object-fit: contain;
+            box-shadow: 0 2px 12px #e3b90033;
+            background: #fffbe8;
+            display: block;
+            transition: transform .25s cubic-bezier(.33,1.13,.85,1.01);
+        }
+        .carrusel-imagen:hover {
+            transform: scale(1.03) rotate(-1deg);
+        }
+        .producto-info {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .producto-titulo {
+            font-size: 1.18rem;
+            font-weight: 600;
+            color: #ad8500;
+            margin-bottom: 7px;
+        }
+        .producto-desc {
+            font-size: 1rem;
+            color: #635404;
+            margin-bottom: 9px;
+        }
+        .boton-comprar {
+            display: inline-block;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 24px;
+            background: #ffe066;
+            color: #665c1f;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 1px 6px #e1d17d62;
+            cursor: pointer;
+            transition: background .2s, transform .18s;
+        }
+        .boton-comprar:hover {
+            background: #ffe699;
+            transform: scale(1.07);
+        }
+        .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff3be;
+            color: #b9a74d;
+            border: none;
+            font-size: 2.1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 0 11px;
+            transition: background .2s;
+            z-index: 2;
+            opacity: 0.7;
+        }
+        .flecha:hover {
+            background: #ffea94;
+            opacity: 1;
+        }
+        .izq { left: -22px; }
+        .der { right: -22px; }
+
+        @media (max-width: 520px) {
+            .carrusel-container { max-width: 98vw; padding: 10px 4px 22px 4px;}
+            .carrusel-imagen { height: 240px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Accesorios</h1>
+    <div class="carrusel-container">
+        <button class="flecha izq" onclick="mover(-1)">&#8592;</button>
+        <img src="Cartera_Bohemia.jpg" alt="Cartera bohemia crochet" class="carrusel-imagen" id="img-carrusel">
+        <div class="producto-info">
+            <div class="producto-titulo" id="titulo">Cartera Bohemia</div>
+            <div class="producto-desc" id="desc">
+                Tejida a mano, diseño bohemio bicolor con borlas decorativas.<br>
+                Exclusiva y ligera para tus días de verano.
+            </div>
+            <button class="boton-comprar">Comprar</button>
+        </div>
+        <button class="flecha der" onclick="mover(1)">&#8594;</button>
+    </div>
+    <script>
+        // Array con info de cada accesorio
+        const productos = [
+            {
+                img: "Cartera_Bohemia.jpg",
+                titulo: "Cartera Bohemia",
+                desc: "Tejida a mano, diseño bohemio bicolor con borlas decorativas.<br>Exclusiva y ligera para tus días de verano."
+            },
+            {
+                img: "Aros_Alpaca2.jpg",
+                titulo: "Aros dorados strass",
+                desc: "Aros argolla de diseño moderno en dorado con detalle de strass.<br>Livianos, versátiles y súper combinables."
+            },
+            {
+                img: "Aros_Alpaca3.jpg",
+                titulo: "Set de argollas doradas",
+                desc: "Set de argollas clásicas en varios tamaños.<br>Perfectas para looks casuales y elegantes."
+            },
+            {
+                img: "Cadenilla_alpaca.jpg",
+                titulo: "Collar sol y piedras",
+                desc: "Cadena dorada con dijes de soles y piedras de colores.<br>Ideal para dar un toque boho a tu outfit."
+            },
+            {
+                img: "aros_alpaca.jpg",
+                titulo: "Aros La Olivia",
+                desc: "Aros dorados diseño exclusivo de La Olivia.<br>Incluye estuche y presentación especial."
+            },
+            {
+                img: "Cartera_Tirantes2.jpg",
+                titulo: "Cartera gris crochet",
+                desc: "Bolso tejido artesanal, amplio y liviano.<br>Con tirantes sintéticos ajustables, único y funcional."
+            },
+            {
+                img: "Cartera_Tirantes.jpg",
+                titulo: "Cartera crochet gris",
+                desc: "Modelo básico y elegante, ideal para el día a día.<br>Hecho en hilo de algodón de alta calidad."
+            },
+            {
+                img: "Cartera_Bohemia2.jpg",
+                titulo: "Detalle cartera bohemia",
+                desc: "Detalle de diseño en cuadrados tejidos a crochet.<br>Un accesorio que resalta cualquier look."
+            }
+        ];
+
+        let pos = 0;
+        const imgEl = document.getElementById("img-carrusel");
+        const tituloEl = document.getElementById("titulo");
+        const descEl = document.getElementById("desc");
+
+        function mostrarProducto(idx) {
+            imgEl.src = productos[idx].img;
+            imgEl.alt = productos[idx].titulo;
+            tituloEl.innerHTML = productos[idx].titulo;
+            descEl.innerHTML = productos[idx].desc;
+        }
+
+        function mover(dir) {
+            pos += dir;
+            if (pos < 0) pos = productos.length - 1;
+            if (pos >= productos.length) pos = 0;
+            mostrarProducto(pos);
+        }
+
+        // Para usar teclas izq/der en el carrusel
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "ArrowRight") mover(1);
+            if (e.key === "ArrowLeft") mover(-1);
+        });
+    </script>
+</body>
+</html>
